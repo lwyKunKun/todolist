@@ -1,0 +1,27 @@
+@import './theme.styl'
+
+cleanDefaultStyle()
+  appearance: none
+  outline: none
+  border: none
+
+btn(c, border = false)
+  padding: 0 10px
+  border-radius: 5px
+  cursor: pointer
+  cleanDefaultStyle()
+
+  if (border == true)
+    border: 1px solid c
+  else
+    background-color: c
+    color: #fff
+
+primaryBtn()
+  btn($lightred)
+
+primaryBorderBtn()
+  btn($lightred, true)
+
+infoBtn()
+  btn($green)
